@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ShopDiagram" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="ShopDiagramContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ProductSet" EntityType="ShopDiagram.Product" />
+    <EntitySet Name="CustomerSet" EntityType="ShopDiagram.Customer" />
+    <EntitySet Name="OrderSet" EntityType="ShopDiagram.Order" />
+    <EntitySet Name="ElementOrderSet" EntityType="ShopDiagram.ElementOrder" />
+    <EntitySet Name="CustomerDataSet" EntityType="ShopDiagram.CustomerData" />
+    <EntitySet Name="AddressCustomerSet" EntityType="ShopDiagram.AddressCustomer" />
+    <EntitySet Name="CategorySet" EntityType="ShopDiagram.Category" />
+    <AssociationSet Name="CategoryProduct" Association="ShopDiagram.CategoryProduct">
+      <End Role="Category" EntitySet="CategorySet" />
+      <End Role="Product" EntitySet="ProductSet" />
+    </AssociationSet>
+    <EntitySet Name="AddressOrderSet" EntityType="ShopDiagram.AddressOrder" />
+    <AssociationSet Name="CustomerDataCustomer" Association="ShopDiagram.CustomerDataCustomer">
+      <End Role="CustomerData" EntitySet="CustomerDataSet" />
+      <End Role="Customer" EntitySet="CustomerSet" />
+    </AssociationSet>
+    <AssociationSet Name="AddressCustomerCustomer" Association="ShopDiagram.AddressCustomerCustomer">
+      <End Role="AddressCustomer" EntitySet="AddressCustomerSet" />
+      <End Role="Customer" EntitySet="CustomerSet" />
+    </AssociationSet>
+    <AssociationSet Name="CustomerOrder" Association="ShopDiagram.CustomerOrder">
+      <End Role="Customer" EntitySet="CustomerSet" />
+      <End Role="Order" EntitySet="OrderSet" />
+    </AssociationSet>
+    <AssociationSet Name="OrderAddressOrder" Association="ShopDiagram.OrderAddressOrder">
+      <End Role="Order" EntitySet="OrderSet" />
+      <End Role="AddressOrder" EntitySet="AddressOrderSet" />
+    </AssociationSet>
+    <EntitySet Name="RabateSet" EntityType="ShopDiagram.Rabate" />
+    <AssociationSet Name="CustomerRabate" Association="ShopDiagram.CustomerRabate">
+      <End Role="Customer" EntitySet="CustomerSet" />
+      <End Role="Rabate" EntitySet="RabateSet" />
+    </AssociationSet>
+    <AssociationSet Name="OrderElementOrder" Association="ShopDiagram.OrderElementOrder">
+      <End Role="Order" EntitySet="OrderSet" />
+      <End Role="ElementOrder" EntitySet="ElementOrderSet" />
+    </AssociationSet>
+    <AssociationSet Name="ProductElementOrder" Association="ShopDiagram.ProductElementOrder">
+      <End Role="Product" EntitySet="ProductSet" />
+      <End Role="ElementOrder" EntitySet="ElementOrderSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" />
+    <Property Type="String" Name="Price" Nullable="false" />
+    <Property Type="String" Name="Quantity" Nullable="false" />
+    <NavigationProperty Name="Category" Relationship="ShopDiagram.CategoryProduct" FromRole="Product" ToRole="Category" />
+    <Property Type="Int32" Name="CategoryId" Nullable="false" />
+    <Property Type="Int32" Name="ElementOrderId" Nullable="false" />
+    <NavigationProperty Name="ElementOrder" Relationship="ShopDiagram.ProductElementOrder" FromRole="Product" ToRole="ElementOrder" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="CustomerData" Relationship="ShopDiagram.CustomerDataCustomer" FromRole="Customer" ToRole="CustomerData" />
+    <NavigationProperty Name="AddressCustomer" Relationship="ShopDiagram.AddressCustomerCustomer" FromRole="Customer" ToRole="AddressCustomer" />
+    <NavigationProperty Name="Order" Relationship="ShopDiagram.CustomerOrder" FromRole="Customer" ToRole="Order" />
+    <NavigationProperty Name="Rabate" Relationship="ShopDiagram.CustomerRabate" FromRole="Customer" ToRole="Rabate" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Customer" Relationship="ShopDiagram.CustomerOrder" FromRole="Order" ToRole="Customer" />
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <NavigationProperty Name="AddressOrder" Relationship="ShopDiagram.OrderAddressOrder" FromRole="Order" ToRole="AddressOrder" />
+    <Property Type="Int32" Name="ElementOrderId" Nullable="false" />
+    <NavigationProperty Name="ElementOrder" Relationship="ShopDiagram.OrderElementOrder" FromRole="Order" ToRole="ElementOrder" />
+  </EntityType>
+  <EntityType Name="ElementOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Quantity" Nullable="false" />
+    <NavigationProperty Name="Order" Relationship="ShopDiagram.OrderElementOrder" FromRole="ElementOrder" ToRole="Order" />
+    <Property Type="Int32" Name="OrderId" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="ShopDiagram.ProductElementOrder" FromRole="ElementOrder" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="CustomerData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" />
+    <Property Type="String" Name="Surname" Nullable="false" />
+    <NavigationProperty Name="Customer" Relationship="ShopDiagram.CustomerDataCustomer" FromRole="CustomerData" ToRole="Customer" />
+    <Property Type="String" Name="PhoneNumber" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AddressCustomer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Street" Nullable="false" />
+    <Property Type="String" Name="Number" Nullable="false" />
+    <Property Type="String" Name="City" Nullable="false" />
+    <NavigationProperty Name="Customer" Relationship="ShopDiagram.AddressCustomerCustomer" FromRole="AddressCustomer" ToRole="Customer" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="ShopDiagram.CategoryProduct" FromRole="Category" ToRole="Product" />
+  </EntityType>
+  <Association Name="CategoryProduct">
+    <End Type="ShopDiagram.Category" Role="Category" Multiplicity="1" />
+    <End Type="ShopDiagram.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="AddressOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Street" Nullable="false" />
+    <Property Type="String" Name="Number" Nullable="false" />
+    <Property Type="String" Name="City" Nullable="false" />
+    <NavigationProperty Name="Order" Relationship="ShopDiagram.OrderAddressOrder" FromRole="AddressOrder" ToRole="Order" />
+  </EntityType>
+  <Association Name="CustomerDataCustomer">
+    <End Type="ShopDiagram.CustomerData" Role="CustomerData" Multiplicity="1" />
+    <End Type="ShopDiagram.Customer" Role="Customer" Multiplicity="1" />
+  </Association>
+  <Association Name="AddressCustomerCustomer">
+    <End Type="ShopDiagram.AddressCustomer" Role="AddressCustomer" Multiplicity="1" />
+    <End Type="ShopDiagram.Customer" Role="Customer" Multiplicity="1" />
+  </Association>
+  <Association Name="CustomerOrder">
+    <End Type="ShopDiagram.Customer" Role="Customer" Multiplicity="1" />
+    <End Type="ShopDiagram.Order" Role="Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OrderAddressOrder">
+    <End Type="ShopDiagram.Order" Role="Order" Multiplicity="1" />
+    <End Type="ShopDiagram.AddressOrder" Role="AddressOrder" Multiplicity="1" />
+  </Association>
+  <EntityType Name="Rabate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Customer" Relationship="ShopDiagram.CustomerRabate" FromRole="Rabate" ToRole="Customer" />
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+  </EntityType>
+  <Association Name="CustomerRabate">
+    <End Type="ShopDiagram.Customer" Role="Customer" Multiplicity="1" />
+    <End Type="ShopDiagram.Rabate" Role="Rabate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Rabate">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OrderElementOrder">
+    <End Type="ShopDiagram.Order" Role="Order" Multiplicity="1" />
+    <End Type="ShopDiagram.ElementOrder" Role="ElementOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ElementOrder">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProductElementOrder">
+    <End Type="ShopDiagram.Product" Role="Product" Multiplicity="1" />
+    <End Type="ShopDiagram.ElementOrder" Role="ElementOrder" Multiplicity="1" />
+  </Association>
+</Schema>

@@ -1,0 +1,15 @@
+C:\Users\Adam\documents\visual studio 2012\Projects\Shop\Core.Domain\bin\Debug\Core.Domain.dll.config
+C:\Users\Adam\documents\visual studio 2012\Projects\Shop\Core.Domain\bin\Debug\Core.Domain.dll
+C:\Users\Adam\documents\visual studio 2012\Projects\Shop\Core.Domain\bin\Debug\Core.Domain.pdb
+C:\Users\Adam\documents\visual studio 2012\Projects\Shop\Core.Domain\bin\Debug\EntityFramework.dll
+C:\Users\Adam\documents\visual studio 2012\Projects\Shop\Core.Domain\bin\Debug\EntityFramework.xml
+C:\Users\Adam\documents\visual studio 2012\Projects\Shop\Core.Domain\obj\Debug\Core.Domain.dll
+C:\Users\Adam\documents\visual studio 2012\Projects\Shop\Core.Domain\obj\Debug\Core.Domain.pdb
+C:\Users\Adam\Dropbox\Semestr\Kurs aplikacji bazodanowych\Zadania\Shop\Core.Domain\bin\Debug\Core.Domain.dll.config
+C:\Users\Adam\Dropbox\Semestr\Kurs aplikacji bazodanowych\Zadania\Shop\Core.Domain\bin\Debug\Core.Domain.dll
+C:\Users\Adam\Dropbox\Semestr\Kurs aplikacji bazodanowych\Zadania\Shop\Core.Domain\bin\Debug\Core.Domain.pdb
+C:\Users\Adam\Dropbox\Semestr\Kurs aplikacji bazodanowych\Zadania\Shop\Core.Domain\bin\Debug\EntityFramework.dll
+C:\Users\Adam\Dropbox\Semestr\Kurs aplikacji bazodanowych\Zadania\Shop\Core.Domain\bin\Debug\EntityFramework.xml
+C:\Users\Adam\Dropbox\Semestr\Kurs aplikacji bazodanowych\Zadania\Shop\Core.Domain\obj\Debug\Core.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Adam\Dropbox\Semestr\Kurs aplikacji bazodanowych\Zadania\Shop\Core.Domain\obj\Debug\Core.Domain.dll
+C:\Users\Adam\Dropbox\Semestr\Kurs aplikacji bazodanowych\Zadania\Shop\Core.Domain\obj\Debug\Core.Domain.pdb

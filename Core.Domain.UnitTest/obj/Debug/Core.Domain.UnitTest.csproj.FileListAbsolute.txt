@@ -1,0 +1,16 @@
+C:\Users\Adam\Documents\Visual Studio 2012\Projects\Shop\Core.Domain.UnitTest\obj\Debug\Core.Domain.UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\Adam\Documents\Visual Studio 2012\Projects\Shop\Core.Domain.UnitTest\bin\Debug\hibernate.cfg.xml
+C:\Users\Adam\Documents\Visual Studio 2012\Projects\Shop\Core.Domain.UnitTest\bin\Debug\Mappings\Product\Product.hbm.xml
+C:\Users\Adam\Documents\Visual Studio 2012\Projects\Shop\Core.Domain.UnitTest\bin\Debug\Mappings\Customer\CustomerAddress.hbm.xml
+C:\Users\Adam\Documents\Visual Studio 2012\Projects\Shop\Core.Domain.UnitTest\bin\Debug\Core.Domain.UnitTest.dll
+C:\Users\Adam\Documents\Visual Studio 2012\Projects\Shop\Core.Domain.UnitTest\bin\Debug\Core.Domain.UnitTest.pdb
+C:\Users\Adam\Documents\Visual Studio 2012\Projects\Shop\Core.Domain.UnitTest\bin\Debug\Core.Domain.dll
+C:\Users\Adam\Documents\Visual Studio 2012\Projects\Shop\Core.Domain.UnitTest\bin\Debug\Core.Domain.pdb
+C:\Users\Adam\Documents\Visual Studio 2012\Projects\Shop\Core.Domain.UnitTest\bin\Debug\Iesi.Collections.pdb
+C:\Users\Adam\Documents\Visual Studio 2012\Projects\Shop\Core.Domain.UnitTest\bin\Debug\Iesi.Collections.xml
+C:\Users\Adam\Documents\Visual Studio 2012\Projects\Shop\Core.Domain.UnitTest\bin\Debug\NHibernate.pdb
+C:\Users\Adam\Documents\Visual Studio 2012\Projects\Shop\Core.Domain.UnitTest\bin\Debug\NHibernate.xml
+C:\Users\Adam\Documents\Visual Studio 2012\Projects\Shop\Core.Domain.UnitTest\obj\Debug\Core.Domain.UnitTest.dll
+C:\Users\Adam\Documents\Visual Studio 2012\Projects\Shop\Core.Domain.UnitTest\obj\Debug\Core.Domain.UnitTest.pdb
+C:\Users\Adam\Documents\Visual Studio 2012\Projects\Shop\Core.Domain.UnitTest\bin\Debug\CustomerAddress.hbm.xml
+C:\Users\Adam\Documents\Visual Studio 2012\Projects\Shop\Core.Domain.UnitTest\bin\Debug\NHibernate.Mapping.Attributes.dll

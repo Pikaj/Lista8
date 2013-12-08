@@ -1,0 +1,16 @@
+C:\Users\Adam\documents\visual studio 2012\Projects\Shop\Core.ObjectsMother\bin\Debug\Core.ObjectsMother.dll
+C:\Users\Adam\documents\visual studio 2012\Projects\Shop\Core.ObjectsMother\bin\Debug\Core.ObjectsMother.pdb
+C:\Users\Adam\documents\visual studio 2012\Projects\Shop\Core.ObjectsMother\obj\Debug\Core.ObjectsMother.dll
+C:\Users\Adam\documents\visual studio 2012\Projects\Shop\Core.ObjectsMother\obj\Debug\Core.ObjectsMother.pdb
+C:\Users\Adam\Documents\Visual Studio 2012\Projects\Shop\Core.ObjectsMother\obj\Debug\Core.ObjectsMother.csprojResolveAssemblyReference.cache
+C:\Users\Adam\Documents\Visual Studio 2012\Projects\Shop\Core.ObjectsMother\bin\Debug\Core.Domain.dll
+C:\Users\Adam\Documents\Visual Studio 2012\Projects\Shop\Core.ObjectsMother\bin\Debug\Core.Domain.pdb
+C:\Users\Adam\Dropbox\Semestr\Kurs aplikacji bazodanowych\Zadania\Shop\Core.ObjectsMother\obj\Debug\Core.ObjectsMother.csprojResolveAssemblyReference.cache
+C:\Users\Adam\Dropbox\Semestr\Kurs aplikacji bazodanowych\Zadania\Shop\Core.ObjectsMother\obj\Debug\Core.ObjectsMother.dll
+C:\Users\Adam\Dropbox\Semestr\Kurs aplikacji bazodanowych\Zadania\Shop\Core.ObjectsMother\obj\Debug\Core.ObjectsMother.pdb
+C:\Users\Adam\Dropbox\Semestr\Kurs aplikacji bazodanowych\Zadania\Shop\Core.ObjectsMother\bin\Debug\Core.ObjectsMother.dll
+C:\Users\Adam\Dropbox\Semestr\Kurs aplikacji bazodanowych\Zadania\Shop\Core.ObjectsMother\bin\Debug\Core.ObjectsMother.pdb
+C:\Users\Adam\Dropbox\Semestr\Kurs aplikacji bazodanowych\Zadania\Shop\Core.ObjectsMother\bin\Debug\Core.Domain.dll
+C:\Users\Adam\Dropbox\Semestr\Kurs aplikacji bazodanowych\Zadania\Shop\Core.ObjectsMother\bin\Debug\Core.Domain.pdb
+C:\Users\Adam\Dropbox\Semestr\Kurs aplikacji bazodanowych\Zadania\Shop\Core.ObjectsMother\bin\Debug\NHibernate.dll
+C:\Users\Adam\Dropbox\Semestr\Kurs aplikacji bazodanowych\Zadania\Shop\Core.ObjectsMother\bin\Debug\Iesi.Collections.dll
